@@ -7,16 +7,17 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ViewTodoListComponent {
   
-  @Input() tasks: string[] = [];
-  @Output() taskDeleted = new EventEmitter<string>();
+  @Input() tasks: { text: string; image: string | ArrayBuffer | null }[] = [];
+  @Output() taskDeleted = new EventEmitter<{ text: string; image: string | ArrayBuffer | null }>();
   @Output() allTasksCleared = new EventEmitter<void>();
 
-  deleteTask(task: string) {
-
+  deleteTask(task: { text: string; image: string | ArrayBuffer | null }) {
     this.taskDeleted.emit(task);
   }
 
   clearAllTasks() {
     this.allTasksCleared.emit();
   }
+
+  
 }

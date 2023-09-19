@@ -6,26 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo-list-parent.component.scss']
 })
 export class TodoListParentComponent {
-  tasks: string[] = [];
 
-  addTask(task: string) {
-    this.tasks.push(task);
-    console.log("tasks array is",this.tasks)
+  tasks: { text: string; image: string | ArrayBuffer | null }[] = [];
+
+  addTask(taskData: { text: string; image: string | ArrayBuffer | null }) {
+    this.tasks.push(taskData);
   }
 
-  deleteTask(task: string) {
-
-    const index = this.tasks.indexOf(task);
-
+  deleteTask(taskData: { text: string; image: string | ArrayBuffer | null }) {
+    const index = this.tasks.indexOf(taskData);
     if (index !== -1) {
       this.tasks.splice(index, 1);
     }
   }
-  
-  clearAllTasks(){
 
-    this.tasks=[];
-
+  clearAllTasks() {
+    this.tasks = [];
   }
+ 
 
 }

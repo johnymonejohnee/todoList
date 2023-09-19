@@ -4,8 +4,8 @@
     display: flex;
     height: 45px;
   }
-  .inputField input{
-    width: 85%;
+  .addtext{
+    width: 70%;
     height: 100%;
     outline: none;
     border-radius: 4px;
@@ -14,9 +14,7 @@
     padding-left: 15px;
     transition: all 0.3s ease;
   }
-  .inputField input:focus{
-    border-color: #8E49E8;
-  }
+ 
   .addtask{
     width: 50px;
     border: none;
@@ -28,6 +26,19 @@
     opacity: 0.8;
     transition: all 0.3s ease;
     cursor: pointer;
+  }
+
+  .inputfile{
+    border: none;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(163, 56, 187);
+    width: 50px;
+    height: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    transition: all 0.3s ease;
   }
 
   .addtask:hover {

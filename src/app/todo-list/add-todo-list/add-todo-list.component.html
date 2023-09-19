@@ -1,4 +1,7 @@
 <div class="inputField">
-    <input type="text" [(ngModel)]="newTask" placeholder="Add your new todo">
+    <input type="text" class="addtext" [(ngModel)]="newTask" placeholder="Add your new todo">
+    <input type="file" style="display: none;" id="fileInput"  class="inputfile"  (change)="onFileSelected($event)" accept="image/*"/>
+    <label for="fileInput" class="inputfile"> Select Image</label>
     <button  class="addtask" (click)="addTask()"><i class="fa fa-plus"></i></button>
   </div>
+ 
