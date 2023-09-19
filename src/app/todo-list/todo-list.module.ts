@@ -5,6 +5,8 @@ import { TodoListRoutingModule } from './todo-list-routing.module';
 import { TodoListParentComponent } from './todo-list-parent/todo-list-parent.component';
 import { ViewTodoListComponent } from './view-todo-list/view-todo-list.component';
 import { AddTodoListComponent } from './add-todo-list/add-todo-list.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { AddTodoListComponent } from './add-todo-list/add-todo-list.component';
   imports: [
     CommonModule,
     TodoListRoutingModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    SharedModuleModule
   ]
 })
 export class TodoListModule { }

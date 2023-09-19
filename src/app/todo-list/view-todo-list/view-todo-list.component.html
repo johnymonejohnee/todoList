@@ -3,7 +3,7 @@
     <ul class="todoList p-0">
         <div class="listWrapper" *ngFor="let task of tasks">
             <div class="task-item">
-                 <img *ngIf="task.image" [src]="task.image" alt="Task Image" width="50" height="50" />
+                 <img *ngIf="task.image" [src]="task.image" alt="Task Image" width="50" height="50"   (click)="onImageClick(task)" />
                 <li>{{ task.text }}</li>
                 <button class="deleteIcon" (click)="deleteTask(task)">
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
