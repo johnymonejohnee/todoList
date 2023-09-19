@@ -1,0 +1,18 @@
+<div class="view-tasks">
+    <h5>Tasks</h5>
+    <ul class="todoList p-0">
+        <div class="listWrapper" *ngFor="let task of tasks">
+            <div class="task-item">
+                <li>{{ task }}</li>
+                <button class="deleteIcon" (click)="deleteTask(task)">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </ul>
+    <div class="footer">
+        <span>You have {{tasks.length}} pending tasks</span>
+        <button class="clearAll" (click)="clearAllTasks()" *ngIf="tasks.length > 0">Clear All</button>
+      </div>
+    
+</div>

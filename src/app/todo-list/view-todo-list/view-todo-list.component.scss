@@ -1,0 +1,79 @@
+.todoList .task-item {
+    display: flex; 
+    align-items: center; 
+    list-style: none;
+    padding: 8px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    cursor: default;
+    overflow: hidden;
+    position: relative;  
+}
+
+.todoList{
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+.task-item li {
+    flex: 1; 
+    min-height: 30px;
+    display: flex; 
+    align-items: center;
+    
+}
+.fa-trash-o {
+    font-size: 24px;
+}
+.deleteIcon {
+    border: none;
+    background: #e74c3c;
+    width: 45px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+  .footer{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .clearAll{
+    padding: 6px 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    background: #8E49E8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #666; 
+  }
+  
+  ::-webkit-scrollbar-track:hover {
+    background-color: #888;
+  }
+

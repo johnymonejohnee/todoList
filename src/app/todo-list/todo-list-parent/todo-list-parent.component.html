@@ -1,0 +1,14 @@
+<div>
+    <div class="parentdiv">
+        <div class="wraper">
+            <h2 class="heading">Todo App</h2>
+            <div class="body">
+                <app-add-todo-list (taskAdded)="addTask($event)"></app-add-todo-list>
+                <app-view-todo-list [tasks]="tasks" (taskDeleted)="deleteTask($event)" (allTasksCleared)="clearAllTasks()"></app-view-todo-list>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+
